@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+     <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS-DISPLAY FLEX </title>
+</head>
+<body>
+
+    <h1> Display Flex </h1>
+
+    <div class="container">
+           <div class="block"> block 1</div>
+           <div class="block">block 2</div>
+           <div class="terc-block">block 3</div>
+           <div class="block">block 4</div>
+           <div class="block">block 5</div>
+    </div>
+    <!-- por padrão elas vem com display block -->
+
+    <p> flex-direction: tem 4 opcões são elas:
+         ROW: por padrão ele vem em linha / <br>
+         ROW-REVERSE: ele colocar em linha mais começa de trás para frente 5 á 1 / <br>
+         COLUMN: por padrão os itens vai fica em coluna / <br>
+         COLUMN-REVERSE: ele vai inverter os itens 5 á 1, ele colocar de trás para frente.
+         </p>
+<hr>
+         <p>
+            flex-wrap: ele serve para quebrar linhas, tem 3 opção são elas:
+            nowrap: por padrão ele vem sem quebra de linha <br>
+            wrap: ele quebra a linha <br>
+            wrap-reverse: ele quebra a linha tambeém de trás para frente. 5/1
+         </p>
+<hr>
+         <p>
+            flex-flow: ele serve para resumir o codigo, tem 3 opção são elas:
+            row nowrap: <br>
+            row wrap: <br>
+            column nowrap:
+
+         </p>
+
+         <hr>
+
+         <p>
+            justify-content: ele serve para justificar o conteúdo, tem 5 opção são elas:
+            flex-start: <br>
+            flex-end: <br>
+            center: <br>
+            space-between: <br>
+            space-around:
+
+         </p>
+
+         <p>
+            align-items: ela serve para alinhar items, tem 4 opções são elas:
+            strech <br>
+            flex-start <br>
+            flex-end <br>
+            center
+         </p>
+
+         <p>
+            align-content: tem 6 opções são elas:
+            strech <br>
+            flex-start <br>
+            flex-end <br>
+            center <br>
+            space-between <br>
+            space-around
+
+         </p>
+
+         <p>
+            gap: ele serve para fazer os espaçamento entre os items. ex:40px!
+         </p>
+
+         <p>
+            flex-items:
+            flex-basic: ele demilita o tamanho dos meus items, ele é colocado diretamente nos items.
+    
+            flex-grow: é capacidade do item de crescer no espaço vago.
+
+            flex-shrink: ele serve para quanto os items vai encolher.
+
+            flex: nada mais é um atalho, para essa 3 propriedades aqui: flex-basic: / flex-grow: /  flex-shrink
+
+            order: ele vai ajudar a trocar as ordem dos items.
+
+            align-self: ele serve para alinhar apenas para um item,
+         </p>
+
+</body>
+
+<style>
+
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    .container{
+
+        /* width: 800px; */
+        height: 800px;
+        margin: 20px;
+        border: 2px solid #975ba6;
+        display: flex;
+
+
+        /*  GAP */
+        /* gap:40px ; */
+        /* ele serve para da espaçamentos entre os items */
+
+
+
+        /*  para usar o align-content tem que ter os valores definidos width: 300px;
+        height: 800px; e utilizer o
+          flex-wrap: wrap; para poder utilizar o align-content*/
+
+
+        /* ALIGN-CONTENT */
+/*
+        align-content: center; */
+        /* ele junta todos no menor espaço possivél,ai depois ele linha no centro*/
+/*
+        align-content: flex-start; */
+        /* ele junta todos no menor espaço possivél, para depois alinha no começo */
+
+        /* align-content: flex-end; */
+         /* ele junta todos no menor espaço possivél, para depois alinha no final */
+
+
+        /* ALIGN-ITEMS */
+
+        align-items: center;
+        /* alinhou no centro os items */
+
+        /* align-items: flex-end; */
+        /* alinhou na linha de baixo os items */
+
+        /* align-items: flex-start; */
+        /* alinhou no inicio, começo os items */
+
+        /* align-items: stretch; */
+        /* por padrão ele vem como strech, ele serve para esticar os items */
+
+        /* flex-direction: row; */
+        /* esse é o eixo horizontal é p principal */
+
+        /* flex-direction: column; */
+        /* eixo secudário é o vertical */
+
+
+        /* JUSTIFY-CONTENT */
+
+        /* justify-content: center; */
+        /* ele alinhou o item ao center */
+
+        /* justify-content: flex-end; */
+        /* ele alinhou os itens no final */
+/*
+        justify-content: start; */
+        /* alinhou os itens no começo */
+
+        /* justify-content: space-around; */
+        /* ele cria um espaço entre os itens um do outro */
+
+        justify-content: space-between;
+        /* ele cria um espaço entres os itens todo*/
+
+
+        /* FLEX-DIRECTION */
+
+        /* por padrão do display flex ele vai alinha os itens um do lado do outro */
+
+        /* flex-direction: column; */
+        /* COLUMN: por padrão os itens vai fica em coluna */
+
+        /* flex-direction: column-reverse; */
+        /* COLUMN-REVERSE: ele vai inverter os itens 5 á 1, ele colocar de trás para frente. */
+
+        /* flex-direction: row; */
+        /* ROW: por padrão ele vem em linha */
+
+        /* flex-direction: row-reverse; */
+        /*  ROW-REVERSE: ele colocar em linha mais começa de trás para frente 5 á 1 */
+
+
+        /* FLEX-WRAP */
+
+        /* flex-wrap: nowrap; */
+        /* por padrão ele vem sem quebra de linha  */
+        /* flex-wrap: wrap; */
+         /* ele quebra a linha para encachar os itens dentro do espaço */
+         /* flex-wrap: wrap-reverse; */
+         /* ele quebra a linha tambeém de trás para frente. 5/1 */
+
+         /* flex-flow: row-reverse wrap; */
+         /* em vez de utilizar duas linhas de codigos, ele usar um linha só.
+         ele serve para resumir o flex-derection e flex-wrap  */
+    }
+
+    /* MAIN AXIS - Eixo principal
+     CROSS AXIS - Eixos secundário */
+
+    .block{
+        /* width: 100px; */
+        height: 100px;
+        background: #cdd728;
+        border: 5px solid #975ba6;
+        border-radius: 6px;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        margin: 20px;
+
+        /* flex-basis: 300px; */
+        /* ele vai alterar a base dos meus items, 
+        ele tanto crescer ou diminuir de acordor com os valores */
+
+        flex-grow: 1;
+        /* os items vão ocupar o máximo do espaço vago */
+
+        /* flex-shrink: 3; */
+        /* serve para o quanto queremos que o nosso items encolha. */
+
+        /* flex: 100px 1 1 ; */
+        /* flex é um atalho das seguintes propriedades  flex-basis: 100px; / flex-grow: 1; /   flex-shrink: 3;
+        é utilizado para economizar linha de cod. */
+
+        /* order: 2; */
+        /* serve para troccar as ordem dos items */
+
+        /* align-self: flex-start; */
+
+
+    }
+
+    /* .seg-block{
+        background: #cdd728;
+        border: 5px solid #975ba6;
+        border-radius: 6px;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        margin: 20px;
+
+        flex: 100px 4 4;
+        /* flex é um atalho das seguintes propriedades  flex-basis: 100px; / flex-grow: 1; /   flex-shrink: 3; */
+
+        /* order: 1; */
+
+        .terc-block{
+            align-self: flex-start;
+            width: 100px;
+            height: 100px;
+        background: #191a19;
+        border: 5px solid #975ba6;
+        border-radius: 6px;
+        color: rgb(231, 220, 220);
+        font-weight: bold;
+        text-align: center;
+        margin: 20px;
+           
+        }
+
+
+
+
+</style>
+
+<script>
+    const first = "voçê é top, você vai mudar sua vida em 2024"
+    console.log(first)
+
+</script>
+</html>
